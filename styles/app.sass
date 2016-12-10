@@ -1,3 +1,4 @@
+// her henter jeg alle de andre sass filer ind
 @import "Reset"
 @import "mixins"
 @import "colors/color"
@@ -12,20 +13,39 @@
 
 body
   font-family: roboto
+  background-image: url("/img/outside_food_wine_29_lighter.jpg")
+  background-attachment: fixed
+  background-position: center
+  background-size: cover
 
-
+// her gør jeg sådan at man ikke kan se nogen af angulars expresions kan ses før angular.min.js er hentet
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak
   display: none !important
+
+input[type="button" i]:disabled, input[type="submit" i]:disabled, input[type="reset" i]:disabled, input[type="file" i]:disabled::-webkit-file-upload-button, button:disabled, select:disabled, keygen:disabled, optgroup:disabled, option:disabled, select[disabled] > option
+  background-color: graytext
+  color: black
 
 .wrapper
   display: flex
   flex-flow: row wrap
 
-/* We tell all items to be 100% width */
-header, section, nav, aside, footer
+/* fortæller alle at de skal være 100% width */
+header, section, nav
   flex: 1 100%
   display: flex
   flex-flow: row wrap
+
+.title-box
+  margin: 0 auto
+  text-align: center
+  flex-flow: column
+  font-size: 3em
+  font-weight: bold
+
+  +element("title")
+    margin: 20px
+    color: white
 
 nav
   position: relative

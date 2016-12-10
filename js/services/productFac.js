@@ -3,11 +3,11 @@
 
 angular.module("productFac", [])
 
-.factory("productData", ['$http', function($http) {
+.factory("productData", function($http) {
   return {
     getProducts: function() {
-      return $http.get("users/Rasmus Dybmose/Desktop/bem/js/data/productData.json");
+      return $http.get("js/data/productData.json");
     }
   }
-}])
+});
 })();

@@ -1,0 +1,20 @@
+<div ng-controller="productController as productCtrl" style="padding: 10px;">
+  <product-filter></product-filter>
+    <ul ng-repeat="list in products">
+      <li ng-controller="panelController as panel" class="product-box__product" ng-repeat="product in list.Products.List | orderBy: orderby | filter: sortby" ng-click="selectTab()">
+            <div class="product-box__product-name">
+                <img ng-src="{{product.Labels[0].Url}}" alt="">
+                {{product.Name}}<br />
+            </div>
+            <div style="width: 100%; height: 100px;" class="product-box__product-description" ng-show="isSelected">
+              <a href="{{product.Url}}">Link</a><br />
+              Type: {{product.Type}}
+
+            </div>
+        </li>
+        <li class="product-box__product" ng-if="products.length === 0">
+            <strong>No results found...</strong>
+        </li>
+    </ul>
+<product-form></product-form>
+</div>

@@ -1,0 +1,10 @@
+<table class="product-tablefilter">
+    <thead>
+        <tr>
+            <td class="product-tablefilter__filter" ng-click="orderbyID()">ID<i ng-show="!arrow" class="fa fa-arrow-down" aria-hidden="true"></i><i ng-show="arrow" class="fa fa-arrow-up" aria-hidden="true"></i></td>
+            <td class="product-tablefilter__filter">Name
+              <!-- her kan man skrive en vin og så søger man næsten efter den men det er bare et filter der spørg efter en vin med det navn du skriver-->
+                <input type="text" name="sortby" value="{{sortby}}" ng-model="sortby"></td>
+        </tr>
+    </thead>
+</table>

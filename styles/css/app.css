@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/   v2.0 | License: none (public domain) */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -91,25 +92,27 @@ table {
   float: left;
   min-width: 200px;
   text-align: end; }
-  .search-box .search-box__search-icon {
+  .search-box__search-icon {
     color: white;
     margin-right: 20px;
     cursor: pointer;
     margin: 20px;
     transition: linear 0.2s; }
-    .search-box .search-box__search-icon:hover {
+    .search-box__search-icon:hover {
       color: #ed373c; }
 
+@media screen and (min-width: 375px) {
+  .search-box {
+    display: none; } }
 .product-box {
   display: flex;
   flex-direction: column;
   max-width: 700px;
   width: 100%;
   position: absolute;
-  margin: 100px 25px;
+  margin: 100px auto 0;
   background-color: #5c62ea;
-  border-radius: 5px;
-  padding: 10px; }
+  border-radius: 5px; }
   .product-box__product {
     background-color: white;
     max-width: 100%;
@@ -120,8 +123,6 @@ table {
     .product-box__product:hover {
       background-color: #454ce7;
       color: white; }
-      .product-box__product:hover .product-name {
-        font-size: 1.1em; }
   .product-box__product-description {
     margin: 10px;
     font-size: 0.8em; }
@@ -134,6 +135,10 @@ table {
     max-width: 700px;
     width: 100%;
     flex-direction: column; }
+    .product-box__product-form .ng-dirty.ng-valid {
+      background-color: #a1ffb8; }
+    .product-box__product-form .ng-dirty.ng-invalid {
+      background-color: #ffa2a2; }
   .product-box__product-input-name {
     border-radius: 5px;
     border: none;
@@ -151,11 +156,14 @@ table {
     .product-box__product-submit:hover {
       background-color: #ff4d2e; }
 
+.product-box {
+  background-color: transparent; }
+
 .product-tablefilter {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 5px; }
-  .product-tablefilter .product-tablefilter__filter {
+  .product-tablefilter__filter {
     text-align: center;
     width: 50%;
     border-bottom: lightgrey;
@@ -163,25 +171,43 @@ table {
     padding: 5px;
     transition: linear 0.2s;
     cursor: pointer; }
-    .product-tablefilter .product-tablefilter__filter:hover {
+    .product-tablefilter__filter:hover {
       background-color: #454ce7;
       color: white; }
 
 body {
-  font-family: roboto; }
+  font-family: roboto;
+  background-image: url("/img/outside_food_wine_29_lighter.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover; }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important; }
+
+input[type="button" i]:disabled, input[type="submit" i]:disabled, input[type="reset" i]:disabled, input[type="file" i]:disabled::-webkit-file-upload-button, button:disabled, select:disabled, keygen:disabled, optgroup:disabled, option:disabled, select[disabled] > option {
+  background-color: graytext;
+  color: black; }
 
 .wrapper {
   display: flex;
   flex-flow: row wrap; }
 
-/* We tell all items to be 100% width */
-header, section, nav, aside, footer {
+/* fort├ªller alle at de skal v├ªre 100% width */
+header, section, nav {
   flex: 1 100%;
   display: flex;
   flex-flow: row wrap; }
+
+.title-box {
+  margin: 0 auto;
+  text-align: center;
+  flex-flow: column;
+  font-size: 3em;
+  font-weight: bold; }
+  .title-box__title {
+    margin: 20px;
+    color: white; }
 
 nav {
   position: relative;

@@ -6,10 +6,9 @@
   max-width: 700px
   width: 100%
   position: absolute
-  margin: 100px 25px
+  margin: 100px auto 0
   background-color: lighten($nav-color, 5%)
   border-radius: 5px
-  padding: 10px
 
   +element("product")
     background-color: white
@@ -22,8 +21,6 @@
     &:hover
       background-color: $nav-color
       color: white
-
-  +element("product-name")
 
   +element("product-description")
     margin: 10px
@@ -38,12 +35,18 @@
     max-width: 700px
     width: 100%
     flex-direction: column
+    .ng-dirty.ng-valid
+      background-color: #a1ffb8
+
+    .ng-dirty.ng-invalid
+      background-color: #ffa2a2
 
   +element("product-input-name")
     border-radius: 5px
     border: none
     padding: 10px
     margin-bottom: 10px
+
 
   +element("product-submit")
     padding: 10px
@@ -57,3 +60,7 @@
 
     &:hover
       background-color: darken(tomato, 5%)
+
+@media screen and (min-width: 375px)
+.product-box
+  background-color: transparent

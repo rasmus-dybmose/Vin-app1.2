@@ -1,79 +1,43 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html ng-app="app">
-
-    <head>
-        <meta charset="utf-8">
-        <title>bem app</title>
-        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
-        <link rel="stylesheet" href="libs/font-awesome-4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="styles/css/app.css">
-        <script type="text/javascript" src="libs/angular.min.js"></script>
-        <script type="text/javascript" src="js/app.js"></script>
-        <script type="text/javascript" src="js/controllers/listController.js"></script>
-        <script type="text/javascript" src="js/controllers/productController.js"></script>
-        <script type="text/javascript" src="js/controllers/panelController.js"></script>
-        <script type="text/javascript" src="js/services/listFac.js"></script>
-        <script type="text/javascript" src="js/services/productFac.js"></script>
-
-        <base href="/">
-    </head>
-
-    <body ng-cloak>
-        <div class="wrapper">
-
-            <nav>
-                <ul class="list" ng-controller="listController as listCtrl">
-                    <li class="list__item" ng-repeat="item in list">
-                        {{item.item}}
-                    </li>
-                </ul>
-                <center class="icon-bar">
-                    <img src="http://vectorlogo4u.com/wp-content/uploads/2016/05/angular-icon-vector.png" alt="water color painting" class="icon-bar__icon icon-bar__icon--color">
-                </center>
-
-                <div class="search-box">
-                    <i class="search-box__search-icon fa fa-search fa-2x" aria-hidden="true"></i>
-                </div>
-            </nav>
-
-            <header></header>
-            <section>
-                <div class="product-box" ng-controller="productController as productCtrl">
-                    <table class="product-tablefilter">
-                        <thead>
-                            <tr>
-                                <td class="product-tablefilter__filter" ng-click="orderbyID()">ID</td>
-                                <td class="product-tablefilter__filter">Name
-                                    <input type="text" name="sortby" value="{{sortby}}" ng-model="sortby"></td>
-                            </tr>
-                        </thead>
-                    </table>
-                    <ul ng-repeat="list in products">
-                      <li ng-controller="panelController as panel" class="product-box__product" ng-repeat="product in list.Products.List | orderBy: orderby | filter: sortby" ng-click="selectTab()">
-                            <div class="product-box__product-name">
-                                <img ng-src="{{product.Labels[0].Url}}" alt="">
-                                {{product.Name}}<br />
-                            </div>
-                            <div style="width: 100%; height: 100px;" class="product-box__product-description" ng-show="isSelected">
-                              <a href="{{product.Url}}">Link</a><br />
-                              Type: {{product.Type}}
-
-                            </div>
-                        </li>
-                        <li class="product-box__product" ng-if="products.length === 0">
-                            <strong>No results found...</strong>
-                        </li>
-                    </ul>
-                    <form name="newProductFrom" class="product-box__product-form" ng-submit="addName()">
-                        <input class="product-box__product-input-name" ng-model="product.name" placeholder="Name..." type="text" name="addName">
-                        <input class="product-box__product-submit" type="submit" name="submit" value="Submit">
-                    </form>
-                </div>
-            </section>
-            <aside></aside>
-            <footer></footer>
-        </div>
-
-    </body>
-
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bem app</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="libs/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/css/app.css">
+    <script type="text/javascript" src="libs/angular.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/controllers/listController.js"></script>
+    <script type="text/javascript" src="js/controllers/productController.js"></script>
+    <script type="text/javascript" src="js/controllers/panelController.js"></script>
+    <script type="text/javascript" src="js/services/listFac.js"></script>
+    <script type="text/javascript" src="js/services/productFac.js"></script>
+    <script type="text/javascript" src="js/directives/appDirective.js"></script>
+    <base href="/">
+</head>
+<body ng-cloak>
+    <div class="wrapper">
+        <nav>
+            <ul class="list" ng-controller="listController as listCtrl">
+                <li class="list__item" ng-repeat="item in list">
+                    {{item.item}}
+                </li>
+            </ul>
+            <center class="icon-bar">
+                <img src="http://vectorlogo4u.com/wp-content/uploads/2016/05/angular-icon-vector.png" alt="water color painting" class="icon-bar__icon icon-bar__icon--color">
+            </center>
+            <div class="search-box">
+                <i class="search-box__search-icon fa fa-search fa-2x" aria-hidden="true"></i>
+            </div>
+        </nav>
+        <section>
+            <header class="title-box">
+                <h1 class="title-box__title">Wine App</h1>
+            </header>
+            <product-ctrl class="product-box"></product-ctrl>
+        </section>
+    </div>
+</body>
 </html>

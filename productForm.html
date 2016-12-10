@@ -1,0 +1,5 @@
+<form name="ProductFrom" class="product-box__product-form" ng-submit="addName()">
+    <input class="product-box__product-input-name" ng-model="product.name" placeholder="Name..." type="text" name="addName" required />
+    <!-- ng-disabled disabler kanppen hvis formens kriterier ikke er upfyldt-->
+    <input class="product-box__product-submit" ng-disabled="!ProductFrom.$valid" type="submit" name="submit" value="Submit">
+</form>

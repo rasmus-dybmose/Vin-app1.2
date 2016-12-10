@@ -1,6 +1,6 @@
 (function() {
 "use strict";
-  angular.module("app", ["ListController","ProductController"])
+  angular.module("app", ["ListController","ProductController","appDirective"])
 
 
 })();
