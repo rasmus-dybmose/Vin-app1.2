@@ -1,0 +1,59 @@
+@import "../colors/color"
+
+.product-box
+  display: flex
+  flex-direction: column
+  max-width: 700px
+  width: 100%
+  position: absolute
+  margin: 100px 25px
+  background-color: lighten($nav-color, 5%)
+  border-radius: 5px
+  padding: 10px
+
+  +element("product")
+    background-color: white
+    max-width: 100%
+    padding: 20px
+    border-bottom: 1px solid lightgrey
+    transition: linear .2s
+    cursor: pointer
+
+    &:hover
+      background-color: $nav-color
+      color: white
+
+  +element("product-name")
+
+  +element("product-description")
+    margin: 10px
+    font-size: .8em
+    &:hover
+      font-size: none
+
+  +element("product-form")
+    margin: 10px auto 0
+    display: flex
+    flex: 1 100%
+    max-width: 700px
+    width: 100%
+    flex-direction: column
+
+  +element("product-input-name")
+    border-radius: 5px
+    border: none
+    padding: 10px
+    margin-bottom: 10px
+
+  +element("product-submit")
+    padding: 10px
+    font-weight: bold
+    border: none
+    width: 100%
+    transition: linear .2s
+    color: white
+    border-radius: 5px
+    background-color: tomato
+
+    &:hover
+      background-color: darken(tomato, 5%)

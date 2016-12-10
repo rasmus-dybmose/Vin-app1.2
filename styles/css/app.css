@@ -1,0 +1,198 @@
+/* http://meyerweb.com/eric/tools/css/reset/   v2.0 | License: none (public domain) */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.icon-bar {
+  float: left; }
+  .icon-bar__icon {
+    width: 100px;
+    height: 50px;
+    padding: 10px; }
+
+.list {
+  float: left;
+  list-style-type: none;
+  line-height: 35px;
+  min-width: 200px; }
+  .list__item {
+    padding: 20px;
+    float: left;
+    color: white;
+    font-weight: 300;
+    transition: linear 0.2s; }
+    .list__item:hover {
+      background-color: #2e36e4; }
+    .list__item--last {
+      margin-right: 0;
+      margin-bottom: 0; }
+
+.login-form {
+  float: left;
+  padding-top: 20px;
+  margin-right: 20px; }
+  .login-form__email {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    float: left;
+    max-width: 300px;
+    width: 320px; }
+  .login-form__submit {
+    float: left;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    width: 80px;
+    background-color: tomato;
+    color: white; }
+
+.search-box {
+  float: left;
+  min-width: 200px;
+  text-align: end; }
+  .search-box .search-box__search-icon {
+    color: white;
+    margin-right: 20px;
+    cursor: pointer;
+    margin: 20px;
+    transition: linear 0.2s; }
+    .search-box .search-box__search-icon:hover {
+      color: #ed373c; }
+
+.product-box {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  width: 100%;
+  position: absolute;
+  margin: 100px 25px;
+  background-color: #5c62ea;
+  border-radius: 5px;
+  padding: 10px; }
+  .product-box__product {
+    background-color: white;
+    max-width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid lightgrey;
+    transition: linear 0.2s;
+    cursor: pointer; }
+    .product-box__product:hover {
+      background-color: #454ce7;
+      color: white; }
+      .product-box__product:hover .product-name {
+        font-size: 1.1em; }
+  .product-box__product-description {
+    margin: 10px;
+    font-size: 0.8em; }
+    .product-box__product-description:hover {
+      font-size: none; }
+  .product-box__product-form {
+    margin: 10px auto 0;
+    display: flex;
+    flex: 1 100%;
+    max-width: 700px;
+    width: 100%;
+    flex-direction: column; }
+  .product-box__product-input-name {
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px; }
+  .product-box__product-submit {
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    width: 100%;
+    transition: linear 0.2s;
+    color: white;
+    border-radius: 5px;
+    background-color: tomato; }
+    .product-box__product-submit:hover {
+      background-color: #ff4d2e; }
+
+.product-tablefilter {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 5px; }
+  .product-tablefilter .product-tablefilter__filter {
+    text-align: center;
+    width: 50%;
+    border-bottom: lightgrey;
+    background-color: white;
+    padding: 5px;
+    transition: linear 0.2s;
+    cursor: pointer; }
+    .product-tablefilter .product-tablefilter__filter:hover {
+      background-color: #454ce7;
+      color: white; }
+
+body {
+  font-family: roboto; }
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important; }
+
+.wrapper {
+  display: flex;
+  flex-flow: row wrap; }
+
+/* We tell all items to be 100% width */
+header, section, nav, aside, footer {
+  flex: 1 100%;
+  display: flex;
+  flex-flow: row wrap; }
+
+nav {
+  position: relative;
+  width: 100%;
+  background-color: #454ce7;
+  flex-direction: row;
+  justify-content: space-between; }
+
+section {
+  justify-content: center;
+  height: 100vh;
+  position: relative; }
+
+/*# sourceMappingURL=app.css.map */

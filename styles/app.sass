@@ -1,0 +1,40 @@
+@import "Reset"
+@import "mixins"
+@import "colors/color"
+
+@import "modules/_icon-bar"
+@import "modules/_list"
+@import "modules/_login-form"
+@import "modules/_search-box"
+@import "modules/_product-box"
+@import "modules/_product-tablefilter"
+
+
+body
+  font-family: roboto
+
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak
+  display: none !important
+
+.wrapper
+  display: flex
+  flex-flow: row wrap
+
+/* We tell all items to be 100% width */
+header, section, nav, aside, footer
+  flex: 1 100%
+  display: flex
+  flex-flow: row wrap
+
+nav
+  position: relative
+  width: 100%
+  background-color: $nav-color
+  flex-direction: row
+  justify-content: space-between
+
+section
+  justify-content: center
+  height: 100vh
+  position: relative
