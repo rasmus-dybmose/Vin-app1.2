@@ -109,9 +109,9 @@ table {
   flex-direction: column;
   max-width: 700px;
   width: 100%;
+  background-color: transparent;
   position: absolute;
   margin: 100px auto 0;
-  background-color: #5c62ea;
   border-radius: 5px; }
   .product-box__product {
     background-color: white;
@@ -155,9 +155,6 @@ table {
     background-color: tomato; }
     .product-box__product-submit:hover {
       background-color: #ff4d2e; }
-
-.product-box {
-  background-color: transparent; }
 
 .product-tablefilter {
   width: 100%;

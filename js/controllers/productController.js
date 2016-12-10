@@ -5,18 +5,18 @@
 
 // her laver jeg nogle filter instillinger
     $scope.sortby = "";
-    $scope.orderby = "Id";
+    $scope.orderby = "-Id";
     $scope.arrow = false;
 
 
     $scope.orderbyID = function() {
       // her laver jeg en toggle fuction som gør at når jeg klikker på en knappen så toggler den mellem de 2 værdier
-      if ($scope.orderby === "Id") {
-         $scope.orderby = "-Id";
+      if ($scope.orderby === "-Id") {
+         $scope.orderby = "Id";
          $scope.arrow = true;
       }
       else {
-        $scope.orderby = "Id";
+        $scope.orderby = "-Id";
         $scope.arrow = false;
       }
     }

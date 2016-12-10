@@ -5,9 +5,9 @@
   flex-direction: column
   max-width: 700px
   width: 100%
+  background-color: transparent
   position: absolute
   margin: 100px auto 0
-  background-color: lighten($nav-color, 5%)
   border-radius: 5px
 
   +element("product")
@@ -61,6 +61,4 @@
     &:hover
       background-color: darken(tomato, 5%)
 
-@media screen and (min-width: 375px)
-.product-box
-  background-color: transparent
+
